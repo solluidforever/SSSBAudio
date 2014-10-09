@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>SSSBAudio</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap-responsive.css" />
+
+		<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+
+		<!KAL>
+			<script type="text/javascript" src="https://dl.dropboxusercontent.com/u/11939206/jss.js"></script>
+		<!KAL>
+
+		<script type="text/javascript" src="js/functions.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/top.js"></script>
+		<style type="text/css">
+			.back-to-top 
+				{
+				position: fixed;
+				bottom: 0px;
+				right: 2px;
+				text-decoration: none;
+				color: #000000;
+				background-color: rgba(235, 235, 235, 0.80);
+				font-size: 15px;
+				font-family:"Garamond", Arial, Helvetica, sans-serif;
+				padding: 1em;
+				display: none;
+				}
+		</style>
+	    <a href="#" class="back-to-top">Back to Top</a>
+	    <!-- Credits -->
+						<div id="divCreditos">
+							<p><strong>Kalyan Somayajula &copy; 2014</strong></p>
+						</div><!-- end div #footer -->
+		<!-- END FOOTER --> 
+    </head>
+
+    <body>
+    <p style="text-align:center">
+    	<a href="mailto:sssbaudio@gmail.com">Questions/Request Bhajan</a>
+	</p>
+    
+        		<div id="divContenedor">
+					<div id="divReproductor">
+						<div id="divInfo">
+		                    <!-- BEGIN INFO MUSIC -->
+							<div id="divLogo">
+								<! KAL img src="image/logo.png" align="left">
+							</div><!-- end div #divLogo -->
+
+							<div id="divInfoCancion">
+								<label id="lblCancion"><strong>Name:</strong><span>-</span></label>
+								<label id="lblArtista"><strong>Artist:</strong><span>-</span></label>
+								<label id="lblDuracion"><strong>Time:</strong><span>-</span></label>
+								<label id="lblEstado"><strong>Lapsed:</strong><span>-</span></label>
+							</div><!-- end div #divInfoCancion -->
+		                    <!-- END INFO MUSIC -->
+
+							<div style="clear: both"></div>
+						</div><!-- end div #divInfo -->
+
+		                <!-- BEGIN PLAYER BUTTONS -->
+						<div id="divControles">
+							<input type="button" id="btnReproducir" title="Play">
+							<input type="button" id="btnPausar" title="Pause">
+							<input type="button" id="btnAnterior" title="Prev">
+							<input type="button" id="btnSiguiente" title="Next">
+							<input type="button" id="btnRepetir" title="Repeat">
+							<input type="button" id="btnSilencio" title="Mute">
+						</div><!-- end div #divControles -->
+		                <!-- END PLAYER BUTTONS -->
+
+		                <!-- BEGIN PROGRESS BAR-->
+		                <div id="divProgreso">
+							<div id="divBarra"></div>
+						</div><!-- end div #divProgreso -->
+		                <!-- END PROGRESS BAR -->
+
+		                <!-- BEGIN PLAYER LIST -->
+						<div id="divLista">
+							<ol id="olCanciones"> </ol>
+						</div><!-- end div #divLista -->
+		                <!-- END PLAYER LIST -->
+
+		            </div><!-- end div #divReproductor -->
+				</div><!-- end div #divContenedor -->
+
+        <script type="text/javascript">
+           app.initialize();
+        </script>
+    </body>
+</html>

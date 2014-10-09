@@ -1,0 +1,194 @@
+/* Simple Metro Music Player - UPDATE 1.1
+ * Color: Skyblue #00A9EC
+ */
+
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font: normal 15px Segoe UI Light, Segoe UI, Calibri Light, Calibri, Arial, Verdana, sans-serif;
+	background: #fff;
+}
+a{
+	color: #00A9EC; /* Change Color */
+    float: center;
+    text-decoration: none;
+    color: #00A9EC; /* Change Color */
+    border-radius: 3px;
+    border: solid 2px rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+}
+a:hover{
+        background: #00A9EC; /* Change Color */
+        color: #fff;
+        border: solid 2px #00A9EC; /* Change Color */
+        
+	}
+input[type="button"]{
+	width: 64px;
+	height: 64px;
+	margin: 2px;
+	border: solid 1px #cecece;
+	background: #fff;
+	border-radius: 3px;
+	cursor: pointer;
+}
+	input[type="button"]:hover{
+		border-color: #989898;
+	}
+	input[type="button"].clsSeleccionado{
+		border-color: #00A9EC; /* Change Color */
+	}
+#divContenedor{
+	margin: auto;
+	/*width: 447px;*/
+	margin-top: 20px;
+}
+	#divReproductor{
+		border: solid 2px #ccc;
+		border-radius: 5px;
+		background: #fff;
+        margin: inherit;
+	}
+		#divInfo{
+                        height: 250px;
+			margin: 10px;
+			border: solid 1px #ccc;
+			/*border-radius: 3px;*/
+			padding: 0px;
+			/*padding-top: 5px;*/
+background-image: url(../image/background.jpg);
+background-repeat:no-repeat;
+background-size:100% 100%;
+                }
+		#divLogo{
+				/*text-align: center;*/
+				display: inline-block;
+				/*padding: 10px;*/
+				/*padding-left: 5px;*/
+				padding-top: 0px;
+			}	
+			#divInfoCancion{
+				text-align: left;
+				display: inline-block;
+				vertical-align: top;
+				/*padding: 0px;*/
+				/*margin-left: auto;*/
+				/*margin-top: 5px;*/
+			    color: #FFF;
+			}
+				#divInfoCancion label{
+					display: block;
+                    font: normal 15px Segoe UI Light, Segoe UI, Arial;
+				}
+					#divInfoCancion label strong{
+						width: 70px;
+                        /*margin-top: 5px;*/
+                        /*margin-left: 1px;*/
+                        /*margin-right: 1px;*/
+						display: inline-block;
+                        font: normal 15px Segoe UI Light, Segoe UI, Arial;
+					}
+			#divControles{
+			text-align: center;
+		}
+			#btnReproducir{background:   url(../image/reproducir.png) center no-repeat;}
+			#btnPausar{background:       url(../image/pausar.png) center no-repeat;}
+			#btnSiguiente{background:    url(../image/siguiente.png) center no-repeat;}
+			#btnAnterior{background:     url(../image/anterior.png) center no-repeat;}
+			#btnRepetir{background:      url(../image/repetir.png) center no-repeat;}
+			#btnSilencio{background:     url(../image/silencio.png) center no-repeat;}
+		#divProgreso{
+			height: 15px;
+			margin: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+			border: solid 1px #ccc;
+			border-radius: 3px;
+			overflow: hidden;
+		}
+			#divBarra{
+				width: 0%;
+				height: 100%;
+				background: #ccc;
+				border-right: solid 1px #00A9EC; /* Change Color */
+			}
+		#divLista{
+			padding: 5px;
+			overflow-x: auto;
+			/*height: 1000px;*/
+			color: #000;
+			font-size: 12px;
+		}
+			#divLista ol{
+				list-style-type: none;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+				#divLista ol li{
+					border-bottom: auto;
+					padding: 5px;
+					cursor: pointer;
+                    border: solid 1px rgba(0, 0, 0, 0);
+                    border-radius: 3px;
+				}
+					#divLista ol li:hover{ /* Pasar el mouse sobre las canciones, sin hacer click*/
+                        background: #fff;
+						color: #767676;
+                        border: solid 1px #ccc;
+                        border-radius: 3px;
+					}
+					#divLista ol li.clsSeleccionado{ /* Dar click a las canciones y quedar reproduciendo */
+						background: #fff;
+						color: #767676;
+                        border: solid 1px #00A9EC; /* Change Color */
+                        border-radius: 3px;
+					}
+					#divLista ol li:last-child{ /* Arreglado la ultima linea de la lista de canciones */
+						border-bottom: auto;
+					}
+					#divLista ol li strong{
+						display: block;
+                        font: normal 15px Segoe UI Light, Segoe UI, Calibri, Arial;
+					}
+					#divLista ol li em{
+						display: block;
+						font: normal 12px Segoe UI Light, Segoe UI, Calibri, Arial;
+                        background: rgba(240, 240, 240, 0.54);
+                        border: solid 2px rgba(240, 240, 240, 0.54);
+                        border-radius: 3px;
+					}
+		#divCreditos{
+			padding: 8px;
+			text-align: Center;
+			font: normal 16px Garamond;
+			color: #000000;
+		}
+
+/* Begin ScrollBar */
+    ::-webkit-scrollbar
+    {
+        width: 10px;
+        border-radius: 3px;
+    }	 
+    ::-webkit-scrollbar-track 
+    {
+        background-color: rgba(0, 0, 0, 0);
+    }
+     ::-webkit-scrollbar-track-piece 
+    {
+        background-color: rgba(0, 0, 0, 0);
+    }	
+    ::-webkit-scrollbar-thumb 
+    {		
+        background: #ccc;
+        height: 50px;
+        border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover 
+    {		
+        background: #bebebe;
+        border-radius: 3px;
+    }
+/* End ScrollBar*/
